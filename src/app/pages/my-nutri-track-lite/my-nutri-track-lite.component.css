@@ -113,45 +113,46 @@ input[type="number"]:focus {
         height: auto;
         overflow-y: auto;
     }
- 
+
     .graph {
         order: 1; /* Asegura que .graph aparezca primero en pantallas pequeñas */
         width: 100%;
-        padding: 20px;
-        height: 50vh;
+        padding: 15px;
+        height: 30vh; /* Reduce la altura para que los meals suban */
         margin-top: 10px;
     }
- 
+
     .meals {
         order: 2;
         width: 100%;
         margin: 10px 0;
     }
- 
+
     .container-add-food {
         width: 90%;
         max-width: 600px;
         padding: 15px;
     }
- 
+
     .add-controls {
         flex-direction: column;
         gap: 5px;
     }
- 
+
     .btn-add {
         padding: 6px 12px;
         font-size: 0.9rem;
     }
- 
+
     .input-quantity {
         width: 50px;
     }
- 
+
     .food-list {
         max-height: 200px;
     }
 }
+
  
 /* Estilo para elementos expansibles dentro de .meals */
 .expanding-element {
