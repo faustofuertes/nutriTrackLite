@@ -13,20 +13,17 @@
 }
 
 .food-list {
-    max-height: 0;
+    height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    transition: height .5s ease;
 }
 
 .food-list.expanded {
-    max-height: 300px;
-    /* Define la altura máxima cuando esté expandido */
+    height: 300px;
     overflow-y: auto;
-    /* Activa el scroll vertical */
     padding-right: 10px;
-    /* Espacio para el scroll */
     padding-bottom: 20px;
-    /* Espacio adicional para evitar que el último elemento se oculte */
+    transition: height .5s ease;
 }
 
 .food-item {
@@ -81,7 +78,7 @@ app-food-container {
     background-color: white;
     color: #66BB6A;
     font-size: 25px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     margin-right: 10px;
 }
 
