@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/nutri-track-lite",
+    "public": "dist/nutri-track-lite/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
