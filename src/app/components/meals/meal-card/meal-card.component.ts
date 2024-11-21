@@ -5,11 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { FoodContainerComponent } from '../../food/food-container/food-container.component';
 
 @Component({
-  selector: 'app-meal-card',
-  standalone: true,
-  imports: [CommonModule, FormsModule, FoodContainerComponent],
-  templateUrl: './meal-card.component.html',
-  styleUrl: './meal-card.component.css'
+    selector: 'app-meal-card',
+    imports: [CommonModule, FormsModule, FoodContainerComponent],
+    templateUrl: './meal-card.component.html',
+    styleUrl: './meal-card.component.css'
 })
 export class MealCardComponent implements OnChanges {
   @Input() arrayFood?: Food[]; //array de comidas que renderiza

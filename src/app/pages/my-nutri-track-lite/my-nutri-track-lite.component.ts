@@ -9,11 +9,10 @@ import { Meals } from '../../interfaces/meals';
 import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
-  selector: 'app-my-nutri-track-lite',
-  standalone: true,
-  imports: [MealListComponent, FormsModule, DatePickerComponent, MealStatisticsComponent],
-  templateUrl: './my-nutri-track-lite.component.html',
-  styleUrl: './my-nutri-track-lite.component.css'
+    selector: 'app-my-nutri-track-lite',
+    imports: [MealListComponent, FormsModule, DatePickerComponent, MealStatisticsComponent],
+    templateUrl: './my-nutri-track-lite.component.html',
+    styleUrl: './my-nutri-track-lite.component.css'
 })
 export class MyNutriTrackLiteComponent implements OnInit {
 

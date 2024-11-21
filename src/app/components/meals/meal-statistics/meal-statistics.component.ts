@@ -5,11 +5,10 @@ import { ProgressBarComponent } from "../progress-bar/progress-bar.component";
 import { LocalStorageService } from '../../../services/local-storage.service';
 
 @Component({
-  selector: 'app-meal-statistics',
-  standalone: true,
-  imports: [CommonModule, ProgressBarComponent],
-  templateUrl: './meal-statistics.component.html',
-  styleUrls: ['./meal-statistics.component.css']
+    selector: 'app-meal-statistics',
+    imports: [CommonModule, ProgressBarComponent],
+    templateUrl: './meal-statistics.component.html',
+    styleUrls: ['./meal-statistics.component.css']
 })
 export class MealStatisticsComponent implements OnInit, OnChanges {
   @Input() dateRecivedFromNT?: string | null; //meal DATE recibido de my-nutri-track

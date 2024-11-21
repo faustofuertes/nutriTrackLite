@@ -7,11 +7,10 @@ import { MyNutriTrackLiteComponent } from "./pages/my-nutri-track-lite/my-nutri-
 import { NavBarComponent } from "./sharedComponents/nav-bar/nav-bar.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [MyNutriTrackLiteComponent, NavBarComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [MyNutriTrackLiteComponent, NavBarComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent   {
 

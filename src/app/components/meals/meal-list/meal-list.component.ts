@@ -5,11 +5,10 @@ import { Meals } from '../../../interfaces/meals';
 import { LocalStorageService } from '../../../services/local-storage.service';
 
 @Component({
-  selector: 'app-meal-list',
-  standalone: true,
-  imports: [MealCardComponent],
-  templateUrl: './meal-list.component.html',
-  styleUrl: './meal-list.component.css'
+    selector: 'app-meal-list',
+    imports: [MealCardComponent],
+    templateUrl: './meal-list.component.html',
+    styleUrl: './meal-list.component.css'
 })
 export class MealListComponent implements OnInit, OnChanges {
   @Input() dateRecived?: string | null; //fecha que recibimos del componente de seleccionar fechas

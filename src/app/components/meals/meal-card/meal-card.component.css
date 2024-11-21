@@ -1,9 +1,17 @@
 .container {
     width: 500px;
-    border-radius: 15px;
-    border: 2px dashed black;
+    border-radius:  15px 15px 0 0;
     padding: 10px;
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.macros{
+    width: 500px;
+    border-radius:  0 0 15px 15px;
+    padding: 10px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.3);
+    background-color: #66BB6A;
+    height: 10px;
 }
 
 .buttons {
@@ -166,6 +174,10 @@ input[type="number"]::-webkit-inner-spin-button {
 @media (max-width: 768px) {
 
     .container {
+        width: 330px;
+        margin: 0;
+    }
+    .macros{
         width: 330px;
         margin: 0;
     }

@@ -1,11 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-date-picker',
-  standalone: true,
-  imports: [],
-  templateUrl: './date-picker.component.html',
-  styleUrls: ['./date-picker.component.css']
+    selector: 'app-date-picker',
+    imports: [],
+    templateUrl: './date-picker.component.html',
+    styleUrls: ['./date-picker.component.css']
 })
 export class DatePickerComponent implements OnInit {
 
