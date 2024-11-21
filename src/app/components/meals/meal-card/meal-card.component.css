@@ -1,13 +1,16 @@
 .container {
     width: 500px;
-    border-radius:  15px 15px 0 0;
+    border-radius: 15px 15px 0 0;
     padding: 10px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.macros{
+.macros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 500px;
-    border-radius:  0 0 15px 15px;
+    border-radius: 0 0 15px 15px;
     padding: 10px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     background-color: #66BB6A;
@@ -104,12 +107,11 @@ app-food-container {
 }
 
 .totalCalories {
-    background-color: #66BB6A;
     color: white;
     padding: 5px 10px;
     border-radius: 100px;
     font-weight: 500;
-   
+
 }
 
 .editMode {
@@ -177,7 +179,8 @@ input[type="number"]::-webkit-inner-spin-button {
         width: 330px;
         margin: 0;
     }
-    .macros{
+
+    .macros {
         width: 330px;
         margin: 0;
     }

@@ -5,7 +5,7 @@
                 <i class="fas fa-plus"></i>
             </button>
             <!-- <label class="totalCalories">{{(totalCalories).toFixed(2)}} kcals.</label> -->
-            <label class="totalCalories">{{mealType}}</label>
+            <!-- <label class="totalCalories">{{mealType}}</label>  -->
             <button (click)="editMode = false" (click)="toggleExpand()" class="chevron-button"
                 [ngClass]="{'rotate': isExpanded}">
                 <i class="fas" [ngClass]="isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
@@ -39,4 +39,6 @@
         </div>
     </div>
     <div class="macros">
+        <label class="totalCalories">{{mealType}}</label>
+        <label class="totalCalories">{{(totalCalories).toFixed(2)}} kcals.</label>
     </div>
