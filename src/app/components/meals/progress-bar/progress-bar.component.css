@@ -2,22 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;  /* Tamaño ajustado para que coincida con el SVG más grande */
-  height: 250px; /* Tamaño ajustado para que coincida con el SVG más grande */
+  width: 400px;  /* Tamaño ajustado para que coincida con el SVG más grande */
+  height: 400px; /* Tamaño ajustado para que coincida con el SVG más grande */
   background: transparent;
   margin: 0 auto;  /* Centra el contenedor dentro del componente padre */
+  margin-right: 40px;
 }
 
 .progress-circle-background {
   fill: none;
-  stroke: #4caf50;  /* Fondo de la barra */
-  stroke-width: 12;  /* Grosor de la barra */
+  stroke: #f3f3f3;  /* Fondo de la barra */
+  stroke-width: 8;  /* Grosor de la barra */
 }
 
 .progress-circle {
   fill: none;
-  stroke: white;  /* Color de la barra de progreso */
-  stroke-width: 12;  /* Grosor de la barra */
+  stroke: #66BB6A;  /* Color de la barra de progreso */
+  stroke-width: 8;  /* Grosor de la barra */
   stroke-linecap: round;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
@@ -25,11 +26,10 @@
 }
 
 .progress-text {
-  font-family: Arial, sans-serif;
-  font-size: 25px;
-  fill: white;
+  font-size: 20px;
+  fill: black;
   text-anchor: middle; 
-  font-weight: 600; 
+  font-weight: 400; 
 }
 
 /* Media query para pantallas pequeñas */

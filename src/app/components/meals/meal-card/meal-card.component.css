@@ -56,13 +56,13 @@ app-food-container {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 0px 6px;
     cursor: pointer;
     margin: 5px;
 }
 
 .btn-delete {
     background-color: red;
+    padding: 0px 3px;
 }
 
 .btn-delete:hover {
@@ -71,6 +71,7 @@ app-food-container {
 
 .btn-edit {
     background-color: green;
+    padding: 1.5px 3.5px;
 }
 
 .btn-edit:hover {
