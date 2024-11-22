@@ -8,18 +8,54 @@ import { Food } from '../interfaces/food';
 })
 export class LocalStorageService {
 
-  meals: Meals[] = [];
+  private meals: Meals[] = [];
 
   constructor() {
-    // Cargar las comidas al inicializar el servicio
     const storedMeals = localStorage.getItem('meals');
     if (storedMeals) {
       this.meals = JSON.parse(storedMeals);
     }
+    else {
+      localStorage.setItem('meals', JSON.stringify([]));
+    }
+  }
+
+  checkMeal(date: string | undefined | null): Observable<Meals | undefined> {
+    var oldMeal: Meals | undefined;
+    this.getMealByDate(date).subscribe(data => {
+      oldMeal = data;
+    });
+
+    if (oldMeal === undefined) {
+
+      var newId = this.generateId();
+      while (!this.isIdUnique(newId)) {
+        newId = this.generateId();
+      }
+
+      const newMeal: Meals = {
+        id: newId,
+        date: date,
+        breakfast: [],
+        lunch: [],
+        snack: [],
+        dinner: []
+      }
+
+      this.postMeal(newMeal).subscribe();
+      return of(newMeal);
+    } else {
+      return of(oldMeal);
+    }
+  }
+
+  postMeal(meal: Meals): Observable<Meals> {
+    this.meals.push(meal);
+    localStorage.setItem('meals', JSON.stringify(this.meals));
+    return of(meal);
   }
 
   getMealByDate(date: string | undefined | null): Observable<Meals | undefined> {
-    // Buscar en el arreglo una comida que coincida con la fecha
     const meal = this.meals.find((meal) => meal.date === date);
 
     return of(meal);
@@ -51,6 +87,14 @@ export class LocalStorageService {
   deleteFoodOnMeal() {
     //recibe el arreglo de meals, y el id de la meal, y el id de la comida a eliminar y el mealtype
     //elimina y lo sube a localstorge
+  }
+
+  generateId(): string {
+    return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
+  }
+
+  isIdUnique(id: string): boolean {
+    return !this.meals.some(meal => meal.id === id);
   }
 
 }

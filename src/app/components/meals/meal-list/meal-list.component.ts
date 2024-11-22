@@ -29,6 +29,7 @@ export class MealListComponent implements OnInit, OnChanges {
   //cuando se ejecuta se hace un GET de el MEAL de la fecha ACTUAL al local storage
   ngOnInit(): void {
     const date = this.getCurrentDate();
+
     this._localStorageService.getMealByDate(date).subscribe(data =>{
       this.meal = data;
 
@@ -76,7 +77,7 @@ export class MealListComponent implements OnInit, OnChanges {
 
   }
 
-
+  //obtiene la fecha actual en formato YYYY-MM-DD
   private getCurrentDate(): string {
     const today = new Date();
     const year = today.getFullYear();
