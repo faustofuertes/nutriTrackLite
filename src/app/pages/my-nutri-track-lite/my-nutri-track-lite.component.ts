@@ -83,4 +83,11 @@ export class MyNutriTrackLiteComponent implements OnInit, OnChanges {
     const day = String(today.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   }
+
+  focusInput() {
+    const inputElement = document.querySelector('input');
+    if (inputElement) {
+      inputElement.focus();
+    }
+  }
 }
