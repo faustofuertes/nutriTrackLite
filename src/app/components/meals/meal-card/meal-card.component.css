@@ -61,6 +61,9 @@ app-food-container {
 }
 
 .btn-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: red;
     padding: 0px 3px;
 }
@@ -70,6 +73,9 @@ app-food-container {
 }
 
 .btn-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: green;
     padding: 1.5px 3.5px;
 }
