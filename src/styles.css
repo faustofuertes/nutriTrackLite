@@ -9,3 +9,7 @@
 button{
   cursor: pointer;
 }
+
+button {
+  -webkit-tap-highlight-color: transparent;  /* Elimina el color de resaltado en Android */
+}
